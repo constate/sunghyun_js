@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>함수</h1>
+  </body>
+  <script>
+    // 함수 선언
+    function helloWorld() {
+      console.log("hello world");
+    }
+
+    // 함수 호출
+    helloWorld();
+
+    // 매개 변수
+    function calculate(value1, value2) {
+      console.log(value1 + value2);
+      console.log(value1 - value2);
+      console.log(value1 * value2);
+      console.log(value1 / value2);
+    }
+
+    calculate(1, 2);
+    calculate(10, 5);
+
+    // return
+    function sum(val1, val2, val3) {
+      // let total = 0;
+      // total = val1 + val2 + val3;
+      // return total;
+
+      return val1 + val2 + val3;
+    }
+
+    console.log(sum(70, 80, 90));
+    console.log(sum(70, 80, 90) / 3);
+  </script>
+</html>
