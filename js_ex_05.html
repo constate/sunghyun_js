@@ -13,13 +13,66 @@
     const cars = ["volvo", "bmw", "saab"];
 
     console.log(cars);
-    console.log(cars[0]);
-    console.log(cars[1]);
+    // console.log(cars[0]);
+    // console.log(cars[1]);
 
+    // 배열 원소 변경
     cars[0] = "hyundai";
 
     console.log(cars);
 
     // const 키워드를 사용해서 배열 선언시 각 원소의 값을 변경 가능
+    // 배열 데이터의 원소는 변경, 추가, 삭제 가능
+    // 다른 배열 데이터로 변경은 불가능
+
+    // cars = ["hyundai", "chevrolet", "kia"];
+
+    // for (let i = 0; i < 3; i++) {
+    // console.log(cars[i]);
+    // }
+
+    // 배열 원소 추가(원소의 끝)
+    cars.push("kia");
+    console.log(cars);
+
+    // 배열 원소 삭제(원소의 끝)
+    cars.pop();
+    console.log(cars);
+
+    const car = {
+      type: "Fiat",
+      model: "500",
+      color: "white"
+    };
+
+    console.log(car);
+    // console.log(car.type);
+
+    //  객체 value 변경
+    car.type = "kia";
+
+    console.log(car);
+    // console.log(car.type);
+
+    // 객체 key:value 추가
+    car.weight = "850kg";
+    console.log(car);
+
+    // 객체 key:value 삭제
+    delete car.model;
+    console.log(car);
+
+    class Car {
+      constructor(name, year) {
+        this.name = name;
+        this.year = year;
+      }
+    }
+
+    let car1 = new Car("hyundai", 2021);
+    let car2 = new Car("kia", 2022);
+
+    console.log(car1);
+    console.log(car2);
   </script>
 </html>

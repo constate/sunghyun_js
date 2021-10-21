@@ -418,7 +418,6 @@ https://www.w3schools.com/js/js_functions.asp
 1. 함수선언(정의)
 function 함수이름([매개변수]) {
   // 실행 코드 블럭
-
   [리턴값]
 }
 
@@ -428,11 +427,34 @@ function 함수이름([매개변수]) {
 ** [] : 생략가능
 ```
 
+```
+함수 선언 형식
+
+function 함수이름(){
+  // 코드블럭
+}
+
+Let(const) 변수이름(함수이름) = function(){ // => 얘도 익명함수를 변수에 담은것
+  // 코드블럭
+}
+
+익명함수
+function(){
+  // 코드블럭
+}
+
+- 함수 이름을 변수처럼 사용하는 경우
+- 함수 이름 필요없이 바로 실행하는 경우
+
+```
+
 ### JS Array(배열)
 
 https://www.w3schools.com/js/js_arrays.asp
 
 - 개수가 많은 데이터를 대표되는 하나의 변수 이름으로 저장할때 사용하는 데이터 타입
+- [] : 인덱스 번호
+- 배열도 객체 데이터
 
 ```
 let cars = ['volvo', 'bmw', 'saab'];
@@ -441,6 +463,70 @@ cars[0] = 'volvo';
 cars[1] = 'bmw';
 cars[2] = 'saab';
 
-배열 변경
+배열 접근(access) / 추가 / 변경 / 삭제
+
+변경
 cars[0] = 'hyundai';
+
+추가
+cars.push('kia'); => 마지막 위치에 원소 추가
+
+삭제
+cars.pop(); => 마지막 원소를 삭제
+```
+
+### JS Object(객체)
+
+https://www.w3schools.com/js/js_objects.asp
+
+- 데이터들을 어떤 실제 대상에 가깝게 다루고자 할 때
+- 객체 데이터는 property, method
+- 각각의 객체 데이터는 name:value로 구성됨 (key:value)
+
+```
+객체 선언
+
+const car = {
+  type:'Fiat',
+  model:'500',
+  color:'white'
+}
+
+객체 접근(access) / 추가 / 변경 / 삭제
+console.log(car.type);
+
+변경
+car.type = 'kia';
+
+추가
+car.weight = '850kg';
+
+삭제
+delete car.model;
+
+```
+
+### JS Class
+
+https://www.w3schools.com/js/js_classes.asp
+
+> Class
+>
+> - 객체 데이터를 생성하기 위한 설계도
+> - 클래스를 사용해서 만든 객체 데이터 : Instance(인스턴스)
+> - 클래스 이름은 대문자로 시작
+
+```
+class 선언
+class Car{
+  constructor(name, year){ // 생성자 함수 => property 생성
+    this.name = name; // this.name : 객체 property 이름 name
+    this.year = year; // this.year : 객체 property 이름 year
+  }
+}
+
+class 사용
+let car1 = new Car('hyundai', 2021);
+let car2 = new Car('kia', 2022);
+
 ```
