@@ -626,7 +626,7 @@ https://www.w3schools.com/js/js_events.asp
 ```
 사용방식
 
-객체.addEventListener(이벤트종류, 함수);
+객체(DOM).addEventListener(이벤트종류, 함수);
 ```
 
 > 실행 함수
@@ -686,3 +686,32 @@ https://www.w3schools.com/js/js_htmldom.asp
 > Update
 >
 > Delete
+
+### Form 요소
+
+https://www.w3schools.com/html/html_forms.asp
+
+- 클라이언트에서 작성한 내용을 서버에 전달할 때 사용하는 Element
+
+> input
+>
+> - type="text"
+> - type="button" / type="submit" / type="reset"
+
+> button
+>
+> - input type button과 사용 형식이 거의 같음
+> - type="button" / type="submit" / type="reset"
+
+```
+<input type="button" value="버튼" /> // empty element
+
+<button type="button">버튼</button>
+
+** 기능의 차이는 없음
+** 활용도가 높은 button 태그를 사용하는것을 권장
+```
+
+> select
+>
+> - 숨겨진 목록에서 아이템 선택
